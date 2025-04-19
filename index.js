@@ -3,29 +3,32 @@ const cats= ["Milo", "Otis", "Garfield"]
 
 
 function destructivelyAppendCat(string) {
-    cats.push('Ralph')
+    cats.push(string)
 }
   
 function destructivelyPrependCat(string) {
-    cats.unshift('Bob')
+    cats.unshift(string)
 }
-function destructivelyRemoveLastCat(string) {
+function destructivelyRemoveLastCat() {
     cats.pop()
 }
-function destructivelyRemoveFirstCat(string) {
+function destructivelyRemoveFirstCat() {
     cats.shift()
 }
 function appendCat(string) {
  
-   const Ccats= cats.slice();
-   Ccats.push('Broom')
-   return Ccats;
+//    const Ccats= cats.slice();
+//    Ccats.push('Broom')
+//    return Ccats;
+return [...cats, string]
       
 } 
 function prependCat(string) {
-    const Ccats= cats.slice();
+    // const Ccats= cats.slice();
+    const Ccats=[...cats]
    Ccats.unshift('Arnold')
    return Ccats;
+
 }
 function removeLastCat(string){
     const Ccats= cats.slice(0,2);
